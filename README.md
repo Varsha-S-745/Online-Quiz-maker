@@ -29,10 +29,10 @@ It features **custom black text styling**, **pink buttons**, and an **interactiv
 ## Project Structure
 
 project-folder/
-│── index.html # Main HTML file
-│── style.css # CSS for layout, styling, and responsiveness
-│── preview.png # Screenshot of the webpage
-└── README.md # Documentation (this file)
+- index.html # Main HTML file
+- style.css # CSS for layout, styling, and responsiveness
+- preview.png # Screenshot of the webpage
+- README.md # Documentation (this file)
 
 ## Advantages
 
