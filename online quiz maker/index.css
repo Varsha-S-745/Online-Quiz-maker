@@ -1,0 +1,160 @@
+:root{
+  --bg-blur: 8px;
+  --card-bg: rgba(255,255,255,0.14);
+  --card-border: black; /* Black border */
+  --text: black;
+  --muted: rgba(0,0,0,0.75); /* Muted black text */
+  --accent: #ff7eb9;
+  --accent-2: #ff7eb9;
+  --shadow: 0 10px 30px rgba(0,0,0,0.3);
+  --radius: 18px;
+  --radius-lg: 24px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: black;
+  overflow-x: hidden;
+}
+
+body {
+    background-image: url('https://www.crushpixel.com/big-static14/preview4/colorful-question-marks-frame-background-1717953.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+button {
+    background-color: pink !important;
+    color: black !important;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #ff7eb9 !important;
+    transform: scale(1.05);
+}
+
+#app {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  color: black;
+}
+
+/* Glass card */
+.card {
+  width: min(900px, 92vw);
+  background: var(--card-bg);
+  border: 2px solid black; /* Black border */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(var(--bg-blur));
+  padding: 28px;
+
+  /* Center text horizontally & vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical center */
+  align-items: center;     /* Horizontal center */
+  text-align: center;      /* Center text lines */
+
+  /* Bigger text */
+  font-size: 1.5rem; /* Increase base size */
+  line-height: 1.5;
+}
+
+
+
+.card h1, .card h2, .card h3 { 
+  margin: 0 0 14px;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+  text-shadow: none;
+  font-size: 2rem;
+  color: black;
+}
+
+
+.subtitle { color: var(--muted); margin-bottom: 16px; }
+
+/* Buttons */
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.btn {
+  border: 1px solid black;
+  background: rgba(255,192,203,0.8); /* Light pink */
+  color: black;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, box-shadow 120ms ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25) inset, 0 2px 10px rgba(0,0,0,0.2);
+  font-weight: 600;
+}
+.btn:hover { transform: translateY(-1px); background: #ff7eb9; }
+.btn:active { transform: translateY(1px); }
+.btn.primary { border-color: black; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: black; }
+.btn.linkish { background: transparent; border: none; text-decoration: underline; padding: 0; box-shadow: none; }
+
+/* Inputs */
+.input, .select, .textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid black;
+  background: rgba(255,255,255,0.1);
+  color: black;
+  outline: none;
+}
+.input::placeholder, .textarea::placeholder { color: rgba(0,0,0,0.6); }
+
+/* Scoreboard link */
+#scoreboard-link {
+  position: fixed;
+  right: 16px;
+  top: 14px;
+  color: black; /* Text color black */
+  text-decoration: none;
+  font-weight: 700;
+  background: pink; /* Pink background */
+  border: 1px solid black;
+  padding: 10px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  transition: transform 120ms ease, background 120ms ease;
+  z-index: 20;
+}
+#scoreboard-link:hover{
+  transform: translateY(-1px);
+  background: #ff7eb9;
+}
+#github-button{
+  position: fixed;
+  left: 16px;
+  top: 14px;
+  color: black; /* Text color black */
+  text-decoration: none;
+  font-weight: 700;
+  background: pink; /* Pink background */
+  border: 1px solid black;
+  padding: 10px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  transition: transform 120ms ease, background 120ms ease;
+  z-index: 20;
+}
+#github-button:hover{
+  transform: translateY(-1px);
+  background: #ff7eb9;
+}
+
